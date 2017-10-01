@@ -17,9 +17,17 @@ public:
 
 	int left(int elem) const;
 	int right(int elem) const;
-	int parent(int elem) const;
 
+	const int& at(int elem) const;
+	int& at(int elem);
+
+	int parent(int elem) const;
+	void maxHeapify(int elem);
+
+	void buildMaxHeap();
+	std::vector<int> heap() const;
 };
+
 
 }
 
