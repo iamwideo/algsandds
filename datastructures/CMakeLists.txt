@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.11)
 
-project(sorting)
+project(data_structures)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_FLAGS -Wall)
