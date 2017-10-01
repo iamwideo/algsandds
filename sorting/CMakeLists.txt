@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 2.8.11)
-project(test_sorting)
+
+project(sorting)
+
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_FLAGS -Wall)
 
-add_subdirectory(lib/gtest-1.6.0)
+include_directories(src)
+
+add_subdirectory(src)
+add_subdirectory(tests)
 enable_testing()
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-add_executable(runUnitTests sorting.t.cpp)
-target_link_libraries(runUnitTests gtest gtest_main)
-add_test(runUnitTests runUnitTests)
